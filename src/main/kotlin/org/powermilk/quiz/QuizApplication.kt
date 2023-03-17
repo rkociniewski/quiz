@@ -6,6 +6,6 @@ import org.springframework.boot.runApplication
 @SpringBootApplication
 class QuizApplication
 
-fun main(args: Array<String>) {
-	runApplication<QuizApplication>(*args)
+fun main(vararg args: String) {
+    runApplication<QuizApplication>(*args)
 }
