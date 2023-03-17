@@ -1,0 +1,24 @@
+spring:
+  flyway:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:quiz;MODE=MySQL
+    user: admin
+    password: password
+    schemas: quiz
+  h2:
+    console:
+      enabled: true
+      path: /console
+      settings:
+        trace: false
+        web-allow-others: false
+  datasource:
+    url: jdbc:h2:mem:quiz;MODE=MySQL
+    username: admin
+    password: password
+    driverClassName: org.h2.Driver
+  jpa:
+    hibernate:
+      ddl-auto: none
+    database-platform: org.hibernate.dialect.H2Dialect
+    defer-datasource-initialization: true
