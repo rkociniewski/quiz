@@ -12,7 +12,7 @@ import org.springframework.data.annotation.Id
 data class Question(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    val id: Int,
+    val id: Long,
     val text: String,
 
     @OneToMany(mappedBy = "question", cascade = [CascadeType.ALL], fetch = FetchType.LAZY)

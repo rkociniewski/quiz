@@ -15,7 +15,7 @@ import org.springframework.data.annotation.Id
 data class QuizForm(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    val id: Int,
+    val id: Long,
     val name: String,
     val description: String,
 
