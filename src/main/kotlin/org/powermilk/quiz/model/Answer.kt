@@ -13,7 +13,7 @@ import jakarta.validation.constraints.Size
 data class Answer(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    val id: Long,
+    var id: Long,
 
     @Size(min = 1, max = 50, message = "The answer should be less than 50 characters")
     @NotNull(message = "No answer text provided.")
@@ -21,5 +21,5 @@ data class Answer(
 
     @JsonIgnore
     @ManyToOne
-    val question: Question,
+    var question: Question,
 )
